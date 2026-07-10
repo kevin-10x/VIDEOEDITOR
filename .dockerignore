@@ -8,3 +8,11 @@ __pycache__/
 .opencode/
 *.md
 wrangler.toml
+src/
+node_modules/
+package.json
+package-lock.json
+bun.lockb
+tsconfig.json
+.github/
+.ruff.toml

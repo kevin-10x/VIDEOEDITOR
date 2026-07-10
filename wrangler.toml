@@ -1,13 +1,17 @@
 name = "video-editor-api"
-compatibility_date = "2024-09-23"
-main = "app/main.py"
+main = "src/index.ts"
+compatibility_date = "2025-06-01"
 
-[build]
-builder = "docker"
-
-[observability]
-enabled = true
-
-[[services]]
-binding = "VIDEO_EDITOR"
+[[containers]]
+class_name = "MyContainer"
 image = "./Dockerfile"
+max_instances = 3
+sleepAfter = "10m"
+
+[[durable_objects.bindings]]
+name = "MY_CONTAINER"
+class_name = "MyContainer"
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["MyContainer"]

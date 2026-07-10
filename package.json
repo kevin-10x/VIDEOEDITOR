@@ -1,0 +1,14 @@
+{
+  "name": "video-editor-api",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "deploy": "wrangler deploy",
+    "dev": "wrangler dev",
+    "build": "wrangler containers build video-editor -t video-editor:latest",
+    "push": "wrangler containers push video-editor:latest"
+  },
+  "devDependencies": {
+    "wrangler": "^3.0.0"
+  }
+}

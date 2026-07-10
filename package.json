@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "deploy": "wrangler deploy",
-    "dev": "wrangler dev",
-    "build": "wrangler containers build video-editor -t video-editor:latest",
-    "push": "wrangler containers push video-editor:latest"
+    "deploy": "npm run build-image && npm run push-image && wrangler deploy",
+    "build-image": "wrangler containers build . -t video-editor:latest",
+    "push-image": "wrangler containers push video-editor:latest",
+    "dev": "wrangler dev"
   },
   "devDependencies": {
     "wrangler": "^3.0.0"

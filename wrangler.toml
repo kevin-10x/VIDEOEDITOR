@@ -1,6 +1,7 @@
 name = "videoeditor"
 main = "src/index.ts"
-compatibility_date = "2025-06-01"
+compatibility_date = "2025-07-01"
+compatibility_flags = ["nodejs_compat"]
 
 [[containers]]
 class_name = "MyContainer"

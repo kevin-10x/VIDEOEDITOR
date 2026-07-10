@@ -16,6 +16,7 @@ WORKDIR /app
 FROM base AS deps
 
 COPY python-requirements.txt .
+RUN pip install --no-cache-dir --upgrade pip setuptools wheel
 RUN pip install --no-cache-dir -r python-requirements.txt
 
 FROM deps AS runtime

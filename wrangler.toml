@@ -2,6 +2,9 @@ name = "video-editor-api"
 main = "src/index.ts"
 compatibility_date = "2025-06-01"
 
+[build]
+command = "bun install"
+
 [[containers]]
 class_name = "MyContainer"
 image = "./Dockerfile"

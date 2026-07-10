@@ -1,8 +1,8 @@
-name = "video-editor-api"
+name = "videoeditor"
 main = "src/index.ts"
 compatibility_date = "2025-06-01"
 
-[containers]
+[[containers]]
 class_name = "MyContainer"
 image = "./Dockerfile"
 max_instances = 3

@@ -7,7 +7,9 @@
     "types": ["@cloudflare/workers-types"],
     "strict": true,
     "skipLibCheck": true,
-    "outDir": "dist"
+    "outDir": "dist",
+    "noEmit": true
   },
-  "include": ["src/**/*.ts"]
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules"]
 }

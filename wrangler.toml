@@ -1,0 +1,13 @@
+name = "video-editor-api"
+compatibility_date = "2024-09-23"
+main = "app/main.py"
+
+[build]
+builder = "docker"
+
+[observability]
+enabled = true
+
+[[services]]
+binding = "VIDEO_EDITOR"
+image = "./Dockerfile"

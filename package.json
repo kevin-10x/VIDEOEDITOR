@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
+    "build": "echo 'No host build needed - container image built by wrangler deploy'",
     "deploy": "npm run build-image && npm run push-image && wrangler deploy",
     "build-image": "wrangler containers build . -t video-editor:latest",
     "push-image": "wrangler containers push video-editor:latest",

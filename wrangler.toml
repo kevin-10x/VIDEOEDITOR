@@ -2,11 +2,10 @@ name = "video-editor-api"
 main = "src/index.ts"
 compatibility_date = "2025-06-01"
 
-[[containers]]
+[containers]
 class_name = "MyContainer"
 image = "./Dockerfile"
 max_instances = 3
-sleepAfter = "10m"
 
 [[durable_objects.bindings]]
 name = "MY_CONTAINER"

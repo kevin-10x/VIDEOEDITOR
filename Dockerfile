@@ -16,9 +16,8 @@ WORKDIR /app
 FROM base AS deps
 
 COPY python-requirements.txt .
-RUN pip install --no-cache-dir --upgrade pip setuptools wheel
-RUN pip install --no-cache-dir $(grep -v openai-whisper python-requirements.txt)
-RUN pip install --no-cache-dir --no-build-isolation openai-whisper==20240930
+RUN pip install --no-cache-dir --upgrade "pip<24.2" && \
+    pip install --no-cache-dir -r python-requirements.txt
 
 FROM deps AS runtime
 

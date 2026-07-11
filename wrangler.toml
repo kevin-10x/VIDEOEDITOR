@@ -1,4 +1,5 @@
 name = "videoeditor"
+account_id = "72e2e322ec1c23d1c20de1f2b0cf8cb5"
 main = "src/index.ts"
 compatibility_date = "2025-07-01"
 compatibility_flags = ["nodejs_compat"]
